@@ -37,43 +37,62 @@ h1 {
     padding-bottom: 10px;
 }
 
-nav {
-    width: auto;
-    height: auto;
+.navegacion {
+    width: 100%;
+    margin: 0px;
     padding: 0 0;
-    background-color: #005883;
     clear: none;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0 0;
-    padding: 0 0;
-    overflow: hidden;
+.navegacion ul {
+    list-style: none;
 }
 
-li {
-    float: left;
+.menu>li {
+    position: relative;
+    display: inline-block;
 }
 
-li a {
+.menu>li>a {
     display: block;
+    padding: 20px 20px;
     background-color: white;
     color: #005883;
     border: solid 4px #005883;
     text-align: center;
-    padding: 20px 20px;
     text-decoration: none;
+    font-family: Verdana;
 }
 
-li a:visited {
-    color: #FB9A0E;
-}
-
-li a:hover {
+.menu li a:hover {
     background-color: #005883;
     color: white;
-    border: solid 3PX white;
+    border: solid 4PX white;
+    transition: all 0.3s;
+}
+
+.submenu {
+    position: absolute;
+    visibility: hidden;
+    width: 180px;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.submenu li a {
+    display: block;
+    padding: 15px 15px;
+    background-color: white;
+    color: #005883;
+    border: solid 2px #005883;
+    text-align: center;
+    text-decoration: none;
+    font-family: Verdana;
+}
+
+.menu li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
 }
 
 .box {
@@ -103,10 +122,10 @@ h2 {
 
 #columna1 {
     padding: 20px;
-    float: left;
-    width: 40%;
+    top: 40px;
+    width: 88%;
     text-align: justify;
-    font-size: 17px;
+    font-size: 20px;
 }
 
 h4 {
@@ -117,25 +136,6 @@ h4 {
 h5 {
     font-style: bold;
     text-align: left;
-}
-
-#columna2 {
-    float: right;
-    width: 44%;
-    margin-top: 55px;
-    margin-right: 55px;
-    position: relative;
-    padding-bottom: 34%;
-    padding-top: 75px;
-    text-align: justify;
-}
-
-#columna2 iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
 }
 
 aside {
